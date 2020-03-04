@@ -13,6 +13,7 @@ def directors_totals(source)
 end
 
 def gross_for_director(d)
+  # I like this better...
   gross_earnings = d[:movies].map{|y| y[:worldwide_gross]}.reduce(:+)
   # total = 0
   # index = 0
