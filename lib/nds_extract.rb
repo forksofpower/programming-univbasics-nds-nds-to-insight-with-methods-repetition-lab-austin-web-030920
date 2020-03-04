@@ -28,6 +28,7 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  names = source.map {|y| y[:name]}
 end
 
 def total_gross(source)
