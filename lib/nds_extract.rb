@@ -13,15 +13,16 @@ def directors_totals(source)
 end
 
 def gross_for_director(d)
-  total = 0
-  index = 0
-
-  while index < d[:movies].length do
-    total += d[:movies][index][:worldwide_gross]
-    index += 1
-  end
-
-  total
+  gross_earnings = d[:movies].map{|y| y[:worldwide_gross]}.reduce(:+)
+  # total = 0
+  # index = 0
+  #
+  # while index < d[:movies].length do
+  #   total += d[:movies][index][:worldwide_gross]
+  #   index += 1
+  # end
+  #
+  # total
 end
 
 def list_of_directors(source)
@@ -39,5 +40,3 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
 end
-
-
